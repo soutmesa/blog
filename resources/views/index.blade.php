@@ -11,7 +11,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
     <link href="css/pace.css" rel="stylesheet">
-    <link href="css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- <link href="css/jquery.dataTables.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.material.min.css">
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -63,7 +65,7 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Offices Information</h2>
           <div class="table-responsive">
-            <table id="example" class="display" cellspacing="0" width="100%">
+            <table id="example" class="display mdl-data-table" cellspacing="0" width="100%">
               <thead>
                 <tr>
                   <th>Name</th>
@@ -95,5 +97,18 @@
     <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/dataTables.js"></script>
     <script type="text/javascript" src="js/pace.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').DataTable( {
+            columnDefs: [
+                {
+                    targets: [ 0, 1, 2 ],
+                    className: 'mdl-data-table__cell--non-numeric'
+                }
+            ]
+        } );
+    } );
+    </script>
   </body>
 </html>
