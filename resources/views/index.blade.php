@@ -19,7 +19,7 @@
 
   </head>
   <body>
-    <!-- <nav class="navbar light-blue lighten-1 navbar-fixed-top" role="navigation">
+    <nav class="navbar light-blue lighten-1 navbar-fixed-top" role="navigation" style="height: 50px;">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -38,7 +38,7 @@
           </ul>
         </div>
       </div>
-    </nav> -->
+    </nav>
 
     <div class="container-fluid">
       <div class="row">
