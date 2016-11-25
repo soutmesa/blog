@@ -13,10 +13,13 @@
     <link href="css/pace.css" rel="stylesheet">
     <!-- <link href="css/jquery.dataTables.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.material.min.css">
+    <link href="css/mdb.min.css" rel="stylesheet">
+
   </head>
   <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <!-- <nav class="navbar light-blue lighten-1 navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,34 +36,14 @@
             <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
         </div>
       </div>
-    </nav>
+    </nav> -->
 
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
+          
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h2 class="sub-header">Offices Information</h2>
@@ -95,20 +78,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/jquery.dataTables.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
     <script type="text/javascript" src="js/dataTables.js"></script>
     <script type="text/javascript" src="js/pace.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js"></script>
+    <script type="text/javascript" src="js/mdb.min.js"></script>
     <script type="text/javascript">
-      $(document).ready(function() {
-        $('#example').DataTable( {
-            columnDefs: [
-                {
-                    targets: [ 0, 1, 2 ],
-                    className: 'mdl-data-table__cell--non-numeric'
-                }
-            ]
-        } );
-    } );
+      // $(document).ready(function() {
+      //   $('#example').DataTable( {
+      //       columnDefs: [
+      //           {
+      //               targets: [ 0, 1, 2 ],
+      //               className: 'mdl-data-table__cell--non-numeric'
+      //           }
+      //       ]
+      //   } );
+      // });
     </script>
   </body>
 </html>
