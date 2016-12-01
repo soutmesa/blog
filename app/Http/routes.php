@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/univers', function () {
-    return view('index');
+    return view('staffs');
 });
