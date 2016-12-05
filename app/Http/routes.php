@@ -17,3 +17,7 @@ Route::get('/', function () {
 Route::get('/univers', function () {
     return view('staffs');
 });
+
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
