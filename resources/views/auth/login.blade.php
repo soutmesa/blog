@@ -34,18 +34,24 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-5 col-lg-4">
                     <div class="well no-padding">
-                        <form action="index.html" id="login-form" class="smart-form client-form">
+                        <form role="form" method="POST" action="{{ url('/login') }}" id="login-form" class="smart-form client-form">
+                        {{ csrf_field() }}
                             <header>
                                 Sign In
                             </header>
                             <fieldset>
-                                <section>
+                                <section class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                     <label class="label">E-mail</label>
                                     <label class="input"> <i class="icon-append fa fa-user"></i>
-                                        <input type="email" name="email">
+                                        <input type="email" name="email" value="{{ old('email') }}" id="email" type="email" class="form-control">
                                         <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b></label>
+                                    @if ($errors->has('email'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                    @endif
                                 </section>
-                                <section>
+                                <section class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                     <label class="label">Password</label>
                                     <label class="input"> <i class="icon-append fa fa-lock"></i>
                                         <input type="password" name="password">
@@ -53,6 +59,11 @@
                                     <div class="note">
                                         <a href="{{ url('/password/reset') }}">Forgot password?</a>
                                     </div>
+                                    @if ($errors->has('password'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    @endif
                                 </section>
                                 <section>
                                     <label class="checkbox">
