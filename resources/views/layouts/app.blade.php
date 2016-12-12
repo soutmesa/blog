@@ -1,20 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us" id="extr-page">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Laravel</title>
-
-    <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
+    <title> SmartAdmin</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- #CSS Links -->
+    <!-- Basic Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production-plugins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-production.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-skins.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/smartadmin-rtl.min.css"> 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/demo.min.css">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,300,400,700">
+    <link rel="apple-touch-icon" href="img/splash/sptouch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/splash/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/splash/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/splash/touch-icon-ipad-retina.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+    <link rel="apple-touch-startup-image" href="img/splash/ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+    <link rel="apple-touch-startup-image" href="img/splash/iphone.png" media="screen and (max-device-width: 320px)">
     <style>
         body {
             font-family: 'Lato';
@@ -25,58 +37,160 @@
         }
     </style>
 </head>
-<body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
-        <div class="container">
-            <div class="navbar-header">
-
-                <!-- Collapsed Hamburger -->
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
-                </ul>
-
-                <!-- Right Side Of Navbar -->
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Authentication Links -->
-                    @if (Auth::guest())
-                        <li><a href="{{ url('/login') }}">Login</a></li>
-                        <li><a href="{{ url('/register') }}">Register</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                            </ul>
-                        </li>
-                    @endif
-                </ul>
-            </div>
+<body class="animated fadeInDown"  id="app-layout">
+    <header id="header">
+        <div id="logo-group">
+            <span id="logo"> <img src="img/logo.png" alt="SmartAdmin"> </span>
         </div>
-    </nav>
+
+        <span id="extr-page-header-space"> <span class="hidden-mobile hiddex-xs">Need an account?</span> <a href="{{ url('/register') }}" class="btn btn-danger">Create account</a> </span>
+    </header>
 
     @yield('content')
 
     <!-- JavaScripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js" integrity="sha384-I6F5OKECLVtK/BL+8iSLDEHowSAfUo76ZL9+kGAgTRdiByINKJaqTPH/QVNS1VDb" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    <!--================================================== -->  
+
+    <!-- PACE LOADER - turn this on if you want ajax loading to show (caution: uses lots of memory on iDevices)-->
+    <script src="js/plugin/pace/pace.min.js"></script>
+
+    <!-- Link to Google CDN's jQuery + jQueryUI; fall back to local -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script> if (!window.jQuery) { document.write('<script src="js/libs/jquery-2.1.1.min.js"><\/script>');} </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script> if (!window.jQuery.ui) { document.write('<script src="js/libs/jquery-ui-1.10.3.min.js"><\/script>');} </script>
+    <script src="js/app.config.js"></script>      
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugin/jquery-validate/jquery.validate.min.js"></script>
+    
+    <!-- JQUERY MASKED INPUT -->
+    <script src="js/plugin/masked-input/jquery.maskedinput.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script type="text/javascript">
+        runAllForms();
+        $(function() {
+            $("#login-form").validate({
+                rules : {
+                    email : {
+                        required : true,
+                        email : true
+                    },
+                    password : {
+                        required : true,
+                        minlength : 3,
+                        maxlength : 20
+                    }
+                },
+                messages : {
+                    email : {
+                        required : 'Please enter your email address',
+                        email : 'Please enter a VALID email address'
+                    },
+                    password : {
+                        required : 'Please enter your password'
+                    }
+                },
+                errorPlacement : function(error, element) {
+                    error.insertAfter(element.parent());
+                }
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        runAllForms();
+        $("#i-agree").click(function(){
+            $this=$("#terms");
+            if($this.checked) {
+                $('#myModal').modal('toggle');
+            } else {
+                $this.prop('checked', true);
+                $('#myModal').modal('toggle');
+            }
+        });
+        
+        // Validation
+        $(function() {
+            // Validation
+            $("#smart-form-register").validate({
+
+                // Rules for form validation
+                rules : {
+                    username : {
+                        required : true
+                    },
+                    email : {
+                        required : true,
+                        email : true
+                    },
+                    password : {
+                        required : true,
+                        minlength : 3,
+                        maxlength : 20
+                    },
+                    passwordConfirm : {
+                        required : true,
+                        minlength : 3,
+                        maxlength : 20,
+                        equalTo : '#password'
+                    },
+                    firstname : {
+                        required : true
+                    },
+                    lastname : {
+                        required : true
+                    },
+                    gender : {
+                        required : true
+                    },
+                    terms : {
+                        required : true
+                    }
+                },
+
+                // Messages for form validation
+                messages : {
+                    login : {
+                        required : 'Please enter your login'
+                    },
+                    email : {
+                        required : 'Please enter your email address',
+                        email : 'Please enter a VALID email address'
+                    },
+                    password : {
+                        required : 'Please enter your password'
+                    },
+                    passwordConfirm : {
+                        required : 'Please enter your password one more time',
+                        equalTo : 'Please enter the same password as above'
+                    },
+                    firstname : {
+                        required : 'Please select your first name'
+                    },
+                    lastname : {
+                        required : 'Please select your last name'
+                    },
+                    gender : {
+                        required : 'Please select your gender'
+                    },
+                    terms : {
+                        required : 'You must agree with Terms and Conditions'
+                    }
+                },
+
+                // Ajax form submition
+                submitHandler : function(form) {
+                    $(form).ajaxSubmit({
+                        success : function() {
+                            $("#smart-form-register").addClass('submited');
+                        }
+                    });
+                },
+                errorPlacement : function(error, element) {
+                    error.insertAfter(element.parent());
+                }
+            });
+        });
+    </script>
 </body>
 </html>
